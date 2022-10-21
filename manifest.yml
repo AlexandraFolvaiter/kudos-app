@@ -1,11 +1,19 @@
 modules:
   confluence:globalPage:
-    - key: kudos-app-global-page-hello-world
+    - key: kudos-app
       function: main
       title: Kudos App
       route: kudos-app
   function:
     - key: main
       handler: index.run
+permissions:
+  scopes: 
+    - read:confluence-user
+    - read:confluence-props
+  external:
+    fetch:
+      backend:
+        - 'LINK_TO_SERVICE'
 app:
   id: ari:cloud:ecosystem::app/9fe19fe1-949a-44e1-804f-265d23af07cd
