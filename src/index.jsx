@@ -23,7 +23,7 @@ const App = () => {
   const sendKudos = async () => {
 
     var toEmail = userDetails?.email;
-    var fromEmail = "hexa.store.test@gmail.com";
+    var fromEmail = "EMAIL";
     var subject = "A colleague has something to say to you! Kudos!"
     var body = `Hi ${userDetails.displayName},
 
@@ -40,17 +40,17 @@ const App = () => {
     `;
 
     await fetch(
-      "https://emailservice20221015082156.azurewebsites.net/api/emails",
+      "LINK_TO_SERVICE",
       {
         method: "POST",
         body: `
         {
           "to": "${toEmail}",
           "from": "${fromEmail}",
-          "server": "smtp.sendgrid.net",
-          "port": 587,
-          "username": "apikey",
-          "password": "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",
+          "server": "SERVER",
+          "port": ppp,
+          "username": "USERNAME",
+          "password": "PASSWORD",
           "subject": "${subject}",
           "body": "${body}"
         }`
